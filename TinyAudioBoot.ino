@@ -11,7 +11,8 @@
 #define LEDOFF {PORTB&=~LEDPORT;}
 #define TOGGLELED {PORTB^=LEDPORT;}
 
-#define INPUTAUDIOPIN (1<<PB0) //PB0 pin 5 attiny85
+//#define INPUTAUDIOPIN (1<<PB0) //PB0 pin 5 attiny85
+#define INPUTAUDIOPIN ACO // internal analog aomparator of attinty85
 #define PINVALUE (PINB&INPUTAUDIOPIN)
 
 #define INITPORT {PORTB|=INPUTAUDIOPIN;} //turn on pull up 
